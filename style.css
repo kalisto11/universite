@@ -1,0 +1,18 @@
+table{
+    width: 70%;
+    border-collapse: collapse;
+    text-align: center;
+    
+}
+th, td{
+    border: 1px solid black;
+    text-align: center;
+}
+.droite{
+    text-align: right;
+    padding-right: 50px;
+}
+.icone{
+    width: 25px;
+    height: 25px;
+}
