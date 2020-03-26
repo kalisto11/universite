@@ -55,6 +55,10 @@
                             require 'Controller/EtudiantsController.php';
                             $controller = new EtudiantsController();
                         break;
+                        case 'professeurs':
+                            require 'Controller/ProfesseursController.php';
+                            $controller = new ProfesseursController();
+                        break;
                     }
                 }else{
                 }
