@@ -18,6 +18,9 @@
                     }
     
                 }
+                elseif($action === 'ajouter'){
+                    require 'View/ProfesseursAjoutForm.php';
+                }
         }
     }
 }

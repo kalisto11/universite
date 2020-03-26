@@ -1,5 +1,5 @@
 <?php
-    class Professeur{
+    class Professeurs{
         public $id;
         public $prenom;
         public $nom;
