@@ -49,14 +49,19 @@
 
                         default:
                     }
-                }elseif (isset($_POST)){
+                }elseif (isset($_POST['page'])){
                     switch ($_POST['page']){
                         case 'etudiants':
                             require 'Controller/EtudiantsController.php';
                             $controller = new EtudiantsController();
                         break;
+                        case 'professeurs' :
+                            require 'Controller/ProfesseursController.php';
+                             $controller = new ProfesseursController();
+                        break;
                     }
                 }else{
+                    require 'View/Accueil.php';
                 }
             ?>
         </main>
