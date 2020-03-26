@@ -32,7 +32,18 @@
             }
             return $donnees;
         }
-
+        public static function ajoutProfesseurs($prenom, $nom, $age, $matiere){
+            if(!isset($bdd)){
+                require 'Model/db.php';
+            }
+            $retour = $bdd->prepare('INSERT INTO professeurs (prenom, nom, age, matiere) VALUES (:prenom, :nom, :age, :matiere)');
+            $retour->execute(array(
+                'prenom' => $prenom,
+                'nom' => $nom,
+                'age' => $age,
+                'matiere' => $matiere
+            ));
+        }
         public function modif($prenom, $nom, $age, $matiere){
             if(!isset($bdd)){
                 require 'Model/db.php';
@@ -40,7 +51,7 @@
             $this->prenom = $prenom;
             $this->nom = $nom;
             $this->age = $age;
-            $this->matiere = $filiere;
+            $this->matiere = $matiere;
 
             $retour = $bdd->prepare('UPDATE professeurs SET prenom = :prenom, nom = :nom, age = :age, matiere = :matiere WHERE id = :id') OR die(print_r($bdd->errorinfo()));
 				$retour->execute(array(
@@ -51,4 +62,12 @@
                 'id' => $this->id
 				));
         }
+        public function supprimer(){
+            if(!isset($bdd)){
+                require 'Model/db.php';
+            } 
+            $retour = $bdd->prepare('DELETE from professeurs WHERE id = ?');
+            $retour->execute(array($this->id));
+        }
+
     }
