@@ -11,9 +11,8 @@
                         $id = intval($_GET['id']);
                         $professeur = new Professeurs($id);
                         require 'View/PofesseursInfos.php';
-    
                     }else{
-                        $professeur = Professeurs::getListProfesseurs();
+                        $professeurs = Professeurs::getListProfesseurs();
                         require 'View/ProfesseursList.php';
                     }
                 }
