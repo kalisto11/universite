@@ -10,10 +10,10 @@
                     if (isset($_GET['id'])){
                         $id = intval($_GET['id']);
                         $professeur = new Professeurs($id);
-                        require 'View/PofesseursInfos.php';
+                        require 'View/ProfesseursInfos.php';
     
                     }else{
-                        $professeur = Professeurs::getListProfesseurs();
+                        $professeurs = Professeurs::getListProfesseurs();
                         require 'View/ProfesseursList.php';
                     }
                 }
@@ -49,7 +49,7 @@
                     break;
                     case 'ajouter':
                         Professeurs::ajoutProfesseurs($_POST['prenom'], $_POST['nom'], $_POST['age'], $_POST['matiere']);
-                        $professeur = Professeurs::getListProfesseurs();
+                        $professeurs = Professeurs::getListProfesseurs();
                         require 'View/ProfesseursList.php';
                     break;
                     default:
