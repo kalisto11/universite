@@ -39,8 +39,8 @@
                     $page = $_GET['page'];
                     switch ($page){
                         case 'etudiants':
-                            require 'Controller/EtudiantController.php';
-                            $controller = new EtudiantController();
+                            require 'Controller/EtudiantsController.php';
+                            $controller = new EtudiantsController();
                         break;
                         case 'professeurs':
                             require 'Controller/ProfesseursController.php';
@@ -52,8 +52,8 @@
                 }elseif (isset($_POST)){
                     switch ($_POST['page']){
                         case 'etudiants':
-                            require 'Controller/EtudiantController.php';
-                            $controller = new EtudiantController();
+                            require 'Controller/EtudiantsController.php';
+                            $controller = new EtudiantsController();
                         break;
                     }
                 }else{

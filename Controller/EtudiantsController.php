@@ -1,8 +1,7 @@
 <?php
-    require 'Model/EtudiantModel.php';
-
+    require 'Model/EtudiantsModel.php';
     
-    class EtudiantController{
+    class EtudiantsController{
 
         public function __construct(){
             if (isset($_GET['action'])){
@@ -11,11 +10,11 @@
                     if (isset($_GET['id'])){
                         $id = intval($_GET['id']);
                         $etudiant = new Etudiants($id);
-                        require 'View/etudiant.php';
+                        require 'View/EtudiantsInfos.php';
     
                     }else{
                         $etudiants = Etudiants::getListEtudiants();
-                        require 'View/ListEtudiants.php';
+                        require 'View/EtudiantsList.php';
                     }
     
                 }
@@ -25,16 +24,16 @@
                         $etudiant = new Etudiants($id);
                         $etudiant->supprimer();
                         $etudiants = Etudiants::getListEtudiants();
-                        require 'View/ListEtudiants.php';
+                        require 'View/EtudiantsList.php';
                     }
                 }
                 elseif($action === 'modifier'){
                     $id = ($_GET['id']);
                     $etudiant = new Etudiants($id);
-                    require 'View/modifEtudiant.php';
+                    require 'View/EtudiantsModifForm.php';
                 }
                 elseif($action === 'ajouter'){
-                    require 'View/ajoutEtudiant.php';
+                    require 'View/EtudiantsAjoutForm.php';
                 }
                 else{
                     
@@ -47,12 +46,12 @@
                         $id = intval($_POST['id']);
                         $etudiant = new Etudiants($id);
                         $etudiant->modif($_POST['prenom'], $_POST['nom'], $_POST['age'], $_POST['filiere']);
-                        require 'View/etudiant.php';
+                        require 'View/EtudiantsInfos.php';
                     break;
                     case 'ajouter':
                         Etudiants::ajoutEtudiant($_POST['prenom'], $_POST['nom'], $_POST['age'], $_POST['filiere']);
                         $etudiants = Etudiants::getListEtudiants();
-                        require 'View/ListEtudiants.php';
+                        require 'View/EtudiantsList.php';
                     break;
                     default:
                 }
