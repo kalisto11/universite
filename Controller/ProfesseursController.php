@@ -25,7 +25,7 @@
                         $id = intval($_GET['id']);
                         $professeur = new Professeurs($id);
                         $professeur->supprimer();
-                        $professeur = Professeurs::getListProfesseurs();
+                        $professeurs = Professeurs::getListProfesseurs();
                         require 'View/ProfesseursList.php';
                     }
                 }
