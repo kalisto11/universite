@@ -17,8 +17,8 @@
             <label for="matiere">Matiere</label>
             <input class="form-control" type="text" id="matiere" name="matiere" value="<?= $professeur->matiere ;?>">
         </div>
-        <input type="hidden" name="id" value="<?= $matiere->id ;?>">
-        <input type="hidden" name="page" value="matiere">
+        <input type="hidden" name="id" value="<?= $professeur->id ;?>">
+        <input type="hidden" name="page" value="professeurs">
         <input type="hidden" name="action" value="modifier">
         <input type="submit" value="Modifier" class="btn btn-success">
     </form>
