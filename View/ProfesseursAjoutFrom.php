@@ -15,7 +15,7 @@
         </div>
         <div class="form-group">
             <label for="matiere">Matiére</label>
-            <input type="text" id="matiere" name="filiere" class="form-control">
+            <input type="text" id="matiere" name="matiere" class="form-control">
         </div>
         <input type="hidden" name="page" value="professeurs">
         <input type="hidden" name="action" value="ajouter">
