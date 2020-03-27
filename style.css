@@ -20,5 +20,26 @@ th, td{
     text-align: center;
     background-color: burlywood;
 }
+.accueil2{
+    background-color:grey
+}
+
+h2{
+    color: #FFF;
+}
+ 
+p{
+    color:#FFF
+}
+
+li{
+    color:#FFF
+}
+
+.titre{
+   margin-left: 0px;
+}
+
+
 
 

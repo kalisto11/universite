@@ -1,5 +1,6 @@
 <?php
     class Professeurs{
+
         public $id;
         public $prenom;
         public $nom;
@@ -13,7 +14,6 @@
             $retour = $bdd->prepare('SELECT * from professeurs WHERE id = ?');
             $retour->execute(array($id));
             $professeurs = $retour->fetch();
-
             $this->id = $professeurs['id'];
             $this->prenom = $professeurs['prenom'];
             $this->nom = $professeurs['nom'];
