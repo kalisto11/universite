@@ -1,4 +1,4 @@
-<h1>Liste des professeurs</h1>
+<h1 class="prof">Liste des professeurs</h1>
 <div>
    <table>
        <tr>

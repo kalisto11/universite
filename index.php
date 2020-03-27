@@ -69,7 +69,7 @@
             ?>
         </main>
 
-        <footer class="footer mt-auto py-3">
+        <footer  class="footer mt-auto py-3">
         <div class="container">
             <span class="text-muted"> Copyright Université de Kaffrine 2020 - Tout droit réservé</span>
         </div>
