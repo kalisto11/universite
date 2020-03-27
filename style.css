@@ -16,3 +16,11 @@ th, td{
     width: 25px;
     height: 25px;
 }
+h1{
+    background-color: darkgrey;
+    margin-right: 500px; 
+}
+h2{
+    background-color: darkseagreen;
+    margin-right: 800px;
+}

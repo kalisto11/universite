@@ -17,8 +17,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                            <a class="nav-link" href="index.php">Accueil <span class="sr-only">(current)</span></a>
+                        </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.php?page=etudiants&action=consulter">Etudiants <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="index.php?page=etudiants&action=consulter">Etudiants <span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?page=professeurs&action=consulter">Professeurs</a>
@@ -49,18 +52,19 @@
 
                         default:
                     }
-                }elseif (isset($_POST)){
+                }elseif (isset($_POST['page'])){
                     switch ($_POST['page']){
                         case 'etudiants':
                             require 'Controller/EtudiantsController.php';
                             $controller = new EtudiantsController();
                         break;
-                        case 'professeurs':
+                        case 'professeurs' :
                             require 'Controller/ProfesseursController.php';
-                            $controller = new ProfesseursController();
+                             $controller = new ProfesseursController();
                         break;
                     }
                 }else{
+                    require 'View/Accueil.php';
                 }
             ?>
         </main>
