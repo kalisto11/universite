@@ -45,7 +45,7 @@
                     case 'modifier':
                         $id = intval($_POST['id']);
                         $etudiant = new Etudiants($id);
-                        $etudiant->modif($_POST['prenom'], $_POST['nom'], $_POST['age'], $_POST['filiere']);
+                        $message = $etudiant->modif($_POST['prenom'], $_POST['nom'], $_POST['age'], $_POST['filiere']);
                         require 'View/EtudiantsInfos.php';
                     break;
                     case 'ajouter':

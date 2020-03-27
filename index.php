@@ -10,7 +10,7 @@
     <body class="d-flex flex-column h-100">
         <header>
             <!-- Fixed navbar -->
-            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
                 <a class="navbar-brand" href="#">Université de Kaffrine</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -23,18 +23,18 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="index.php?page=etudiants&action=consulter">Etudiants</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="index.php?page=professeurs&action=consulter">Professeurs</a>
                         </li>
                     </ul>
                     <form class="form-inline mt-2 mt-md-0">
                         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
                     </form>
                 </div>
             </nav>
         </header>
-        <div class="container-fluid wrapper">
+        <div class="container-fluid mt-5 pt-1 wrapper">
             <div class="row">
                  <!-- Begin page content -->
                 <main class="col-md-9" style="margin-top:100px; padding-left: 50px;">
@@ -69,14 +69,14 @@
                         }
                     ?>
                 </main>
-                <aside class="col-md-3">
-
+                <aside class="col-md-3 bg-info">
+                        <p class="text-white">Les annonces ici bientot</p>
                 </aside>
             </div> 
         </div>
         <footer class="bg-dark py-5">
             <div class="container">
-                <span class="text-muted"> Copyright Université de Kaffrine 2020 - Tout droit réservé</span>
+                <span class="text-white"> Copyright Université de Kaffrine 2020 - Tout droit réservé</span>
             </div>
         </footer>
 

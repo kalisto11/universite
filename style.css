@@ -31,9 +31,11 @@ tr:nth-child(odd){
 table a{
     text-decoration: none;
 }
-.wrapper{
-    
+main{
+    min-height: 600px;
 }
 aside{
     border-left: 1px solid #e5edf1f8;
+    background-color: #84b4e2;
+
 }

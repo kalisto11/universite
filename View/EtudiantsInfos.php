@@ -1,3 +1,17 @@
+<?php if(isset($message)) : ?>
+    <?php if($message == 1) : ?>
+    <div class="alert alert-success" role="alert">
+        Les informations ont été modifiées avec succès !
+    </div>
+    <?php endif ; ?>
+    <?php if($message != 1) : ?>
+        <div class="alert alert-danger" role="alert">
+            Les informations n'ont pas pu etre modifiées !
+        </div>
+    <?php endif ; ?>
+<?php endif ; ?>
+
+
 <h1>Informations sur l'Etudiant</h1>
 <div class="container my-5">
     <div class="card">

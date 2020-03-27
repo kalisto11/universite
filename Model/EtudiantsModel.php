@@ -31,13 +31,14 @@
             $this->filiere = $filiere;
 
             $retour = $bdd->prepare('UPDATE etudiants SET prenom = :prenom, nom = :nom, age = :age, filiere = :filiere WHERE id = :id') OR die(print_r($bdd->errorinfo()));
-				$retour->execute(array(
+				$reponse = $retour->execute(array(
 				'prenom' => $this->prenom,
 				'nom' => $this->nom,
 				'age' => $this->age,
                 'filiere' => $this->filiere,
                 'id' => $this->id
-				));
+                ));
+            return $reponse ;
         }
 
         public function supprimer(){
