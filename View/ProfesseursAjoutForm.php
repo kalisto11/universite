@@ -1,4 +1,4 @@
-<h1>Ajouter un nouvel Professeur</h1>
+<h1>Ajouter un nouveau Professeur</h1>
 <div class="container">
     <form method="post" action="index.php?page=professeurs">
         <div class="form-group">

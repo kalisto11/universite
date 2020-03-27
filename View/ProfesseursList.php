@@ -2,10 +2,10 @@
 <div>
    <table>
        <tr>
-           <th>Prenom</th>
+           <th>Prénom</th>
            <th>Nom</th>
            <th>Age</th>
-           <th>Matiere</th>
+           <th>Matière</th>
            <th>Action</th>
        </tr>
        <?php foreach($professeurs as $professeur): ?>

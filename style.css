@@ -1,8 +1,7 @@
 table{
     width: 70%;
     border-collapse: collapse;
-    text-align: center;
-    
+    text-align: center;  
 }
 th, td{
     border: 1px solid black;
@@ -15,4 +14,26 @@ th, td{
 .icone{
     width: 25px;
     height: 25px;
+}
+
+th{
+    height: 40px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #84b4e2;
+}
+tr:nth-child(even){
+    background: #fff
+}
+tr:nth-child(odd){
+    background:rgba(118, 122, 122, 0.336)
+}
+table a{
+    text-decoration: none;
+}
+.wrapper{
+    
+}
+aside{
+    border-left: 1px solid #e5edf1f8;
 }

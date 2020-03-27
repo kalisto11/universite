@@ -10,7 +10,7 @@
     <body class="d-flex flex-column h-100">
         <header>
             <!-- Fixed navbar -->
-            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
                 <a class="navbar-brand" href="#">Université de Kaffrine</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -18,10 +18,10 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                            <a class="nav-link" href="index.php">Accueil <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="index.php">Accueil</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.php?page=etudiants&action=consulter">Etudiants <span class="sr-only"></span></a>
+                            <a class="nav-link" href="index.php?page=etudiants&action=consulter">Etudiants</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?page=professeurs&action=consulter">Professeurs</a>
@@ -34,45 +34,50 @@
                 </div>
             </nav>
         </header>
+        <div class="container-fluid wrapper">
+            <div class="row">
+                 <!-- Begin page content -->
+                <main class="col-md-9" style="margin-top:100px; padding-left: 50px;">
+                    <?php 
+                        if (isset($_GET['page'])){
+                            $page = $_GET['page'];
+                            switch ($page){
+                                case 'etudiants':
+                                    require 'Controller/EtudiantsController.php';
+                                    $controller = new EtudiantsController();
+                                break;
+                                case 'professeurs':
+                                    require 'Controller/ProfesseursController.php';
+                                    $controller = new ProfesseursController();
+                                break;
 
-        <!-- Begin page content -->
-        <main style="margin-top:100px; padding-left: 50px;">
-            <?php 
-                if (isset($_GET['page'])){
-                    $page = $_GET['page'];
-                    switch ($page){
-                        case 'etudiants':
-                            require 'Controller/EtudiantsController.php';
-                            $controller = new EtudiantsController();
-                        break;
-                        case 'professeurs':
-                            require 'Controller/ProfesseursController.php';
-                            $controller = new ProfesseursController();
-                        break;
+                                default:
+                            }
+                        }elseif (isset($_POST['page'])){
+                            switch ($_POST['page']){
+                                case 'etudiants':
+                                    require 'Controller/EtudiantsController.php';
+                                    $controller = new EtudiantsController();
+                                break;
+                                case 'professeurs' :
+                                    require 'Controller/ProfesseursController.php';
+                                    $controller = new ProfesseursController();
+                                break;
+                            }
+                        }else{
+                            require 'View/Accueil.php';
+                        }
+                    ?>
+                </main>
+                <aside class="col-md-3">
 
-                        default:
-                    }
-                }elseif (isset($_POST['page'])){
-                    switch ($_POST['page']){
-                        case 'etudiants':
-                            require 'Controller/EtudiantsController.php';
-                            $controller = new EtudiantsController();
-                        break;
-                        case 'professeurs' :
-                            require 'Controller/ProfesseursController.php';
-                             $controller = new ProfesseursController();
-                        break;
-                    }
-                }else{
-                    require 'View/Accueil.php';
-                }
-            ?>
-        </main>
-
-        <footer class="footer mt-auto py-3">
-        <div class="container">
-            <span class="text-muted"> Copyright Université de Kaffrine 2020 - Tout droit réservé</span>
+                </aside>
+            </div> 
         </div>
+        <footer class="bg-dark py-5">
+            <div class="container">
+                <span class="text-muted"> Copyright Université de Kaffrine 2020 - Tout droit réservé</span>
+            </div>
         </footer>
 
         <script src="bootstrap4/js/jquery.min.js"></script>
