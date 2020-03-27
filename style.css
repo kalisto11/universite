@@ -19,9 +19,11 @@ th, td{
 .accueil{
     text-align: center;
     background-color: burlywood;
+    font-family: Algerian, Calibri sans-serif;
 }
-.accueil2{
-    background-color:grey
+.titre{
+    background-color:grey;
+    margin-left: 0px;
 }
 
 h2{
@@ -29,15 +31,11 @@ h2{
 }
  
 p{
-    color:#FFF
+    color:#FFF;
 }
 
 li{
-    color:#FFF
-}
-
-.titre{
-   margin-left: 0px;
+    color:#FFF;
 }
 
 

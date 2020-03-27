@@ -1,8 +1,6 @@
 <div class="titre">
 
 <h1 class="accueil">Bievenue à l'université de Kaffrine</h1>
-
-<div class="accueil2">
 <div>
     <h2> Présentation</h2>
     <p>
@@ -18,6 +16,5 @@
         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, architecto?</li>
         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, architecto?</li>
     </ul>
-</div>
 </div>
 </div>
