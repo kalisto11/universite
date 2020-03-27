@@ -50,7 +50,6 @@
                                     require 'Controller/ProfesseursController.php';
                                     $controller = new ProfesseursController();
                                 break;
-
                                 default:
                             }
                         }elseif (isset($_POST['page'])){

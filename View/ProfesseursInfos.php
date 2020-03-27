@@ -12,7 +12,7 @@
     </div>
     <div class="mt-5">
         <p class="droite">
-            <a class="btn btn-warning" href="index.php?page=professeurs&action=consulter">Voir la liste des étudiants</a>
+            <a class="btn btn-warning" href="index.php?page=professeurs&action=consulter">Voir la liste des professeurs</a>
         </p>
     </div>
 </div>
