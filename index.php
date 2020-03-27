@@ -36,7 +36,7 @@
         </header>
 
         <!-- Begin page content -->
-        <main style="margin-top:100px; padding-left: 50px;">
+        <main style="margin-top:0px; padding-left: 0px;">
             <?php 
                 if (isset($_GET['page'])){
                     $page = $_GET['page'];
