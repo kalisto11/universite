@@ -34,6 +34,7 @@
                 </div>
             </nav>
         </header>
+<<<<<<< HEAD
         <div class="container-fluid mt-5 pt-1 wrapper">
             <div class="row">
                  <!-- Begin page content -->

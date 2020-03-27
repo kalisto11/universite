@@ -15,8 +15,6 @@ th, td{
     width: 25px;
     height: 25px;
 }
-<<<<<<< HEAD
-
 th{
     height: 40px;
     font-weight: bold;
@@ -61,5 +59,13 @@ p{
 
 li{
     color:#FFF;
+}
+h1{
+    text-align: center;
+    background-color:hsl(46, 98%, 51%)
+}
+
+.prof{
+    background-color: rgb(39, 245, 39);
 }
 
