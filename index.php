@@ -10,7 +10,7 @@
     <body class="d-flex flex-column h-100">
         <header>
             <!-- Fixed navbar -->
-            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+            <nav class="navbar navbar-expand-md navbar-dark bg-primary">
                 <a class="navbar-brand" href="#">Université de Kaffrine</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -34,8 +34,7 @@
                 </div>
             </nav>
         </header>
-<<<<<<< HEAD
-        <div class="container-fluid mt-5 pt-1 wrapper">
+        <div class="container-fluid pt-1 wrapper">
             <div class="row">
                  <!-- Begin page content -->
                 <main class="col-md-9" style="margin-top:100px; padding-left: 50px;">
@@ -50,6 +49,12 @@
                                 case 'professeurs':
                                     require 'Controller/ProfesseursController.php';
                                     $controller = new ProfesseursController();
+                                break;
+                                case 'annonces':
+                                    require_once 'Controller/AnnoncesController.php';
+                                    $controller = new AnnoncesController();
+                                    $annonces = $controller->getAnnonces();
+                                    $controller->afficher();
                                 break;
                                 default:
                             }
@@ -69,8 +74,12 @@
                         }
                     ?>
                 </main>
-                <aside class="col-md-3 bg-info">
-                        <p class="text-white">Les annonces ici bientot</p>
+                <aside class="col-md-3">
+                    <?php require_once 'Controller/AnnoncesController.php';
+                    $Controller = new AnnoncesController();
+                    $controller->getAnnonces();
+                    $controller->afficher();
+                    ?>
                 </aside>
             </div> 
         </div>

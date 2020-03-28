@@ -35,8 +35,6 @@ main{
 }
 aside{
     border-left: 1px solid #e5edf1f8;
-    background-color: #84b4e2;
-
 }
 
 .accueil{
@@ -53,13 +51,10 @@ h2{
     color: #FFF;
 }
  
-p{
+ main p{
     color:#FFF;
 }
 
-li{
-    color:#FFF;
-}
 h1{
     text-align: center;
     background-color:hsl(46, 98%, 51%)
