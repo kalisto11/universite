@@ -26,6 +26,9 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="index.php?page=professeurs&action=consulter">Professeurs</a>
                         </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.php?page=annonces&action=consulter">Annonces</a>
+                        </li>
                     </ul>
                     <form class="form-inline mt-2 mt-md-0">
                         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
@@ -86,7 +89,6 @@
                 <span class="text-white"> Copyright Université de Kaffrine 2020 - Tout droit réservé</span>
             </div>
         </footer>
-
         <script src="bootstrap4/js/jquery.min.js"></script>
         <script src="bootstrap4/js/propper.min.js"></script>
         <script src="bootstrap4/js/bootstrap.min.js"></script>
