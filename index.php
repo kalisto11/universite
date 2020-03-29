@@ -38,7 +38,7 @@
             <div class="row">
                  <!-- Begin page content -->
                 <main class="col-md-9" style="margin-top:100px; padding-left: 50px;">
-                    <?php 
+                    <?php
                         if (isset($_GET['page'])){
                             $page = $_GET['page'];
                             switch ($page){
@@ -53,8 +53,7 @@
                                 case 'annonces':
                                     require_once 'Controller/AnnoncesController.php';
                                     $controller = new AnnoncesController();
-                                    $annonces = $controller->getAnnonces();
-                                    $controller->afficher();
+                                    $controller->afficherAnnonce();
                                 break;
                                 default:
                             }
@@ -76,9 +75,8 @@
                 </main>
                 <aside class="col-md-3">
                     <?php require_once 'Controller/AnnoncesController.php';
-                    $Controller = new AnnoncesController();
-                    $controller->getAnnonces();
-                    $controller->afficher();
+                    $controller = new AnnoncesController();
+                    $controller->AfficherListAnnonces();
                     ?>
                 </aside>
             </div> 

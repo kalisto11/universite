@@ -1,18 +1,21 @@
 <?php
-    require 'Model/AnnoncesControllerModel.php';
+    require 'Model/AnnoncesModel.php';
+    require 'Model/Request.php';
     class AnnoncesController{
-        public $model;
+        public $request;
         public $annonces;
+
         public function __construct(){
-            $model = new AnnoncesControllerModel();
-            $this->model = $model;
-            $this->annonces = $this->getAnnonces();
+            $this->request = new Request();
         }
 
-        public function getAnnonces(){
-            return $this->model->annonces;
+        public function afficherListAnnonces(){
+            $annonces = Annonces::getListAnnonces();
+            require 'View/Annonces.php';
         }
-        public function afficher(){
-            require $this->model->page;
+
+        public function afficherAnnonce(){
+            $annonce = new annonces($this->request->id);
+            require 'View/Annonce.php';
         }
     }
